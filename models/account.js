@@ -18,6 +18,11 @@ const accountSchema = new mongoose.Schema({
         default: "Basic",
         required: true,
     },
+    bio: {
+        type: String,
+        required: true
+    },
+    created: Date
 })
 
 

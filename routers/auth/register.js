@@ -7,7 +7,6 @@ router.post('/', async (req, res) => {
     const { username, email } = req.body
     const account = new Account(req.body)
     const userCheck = Account.findOne({ "username": username })
-    console.log(userCheck);
     if (!userCheck) {
         res.status(400).json({ message: "user name is already in use." })
         return;
